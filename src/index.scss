@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #F3F7FA;
+  font-family: sans-serif;
+  color: #787878;
+}
+
+.container {
+  max-width: 1220px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  padding: 60px;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.main-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+aside {
+  position: sticky;
+  top: 30px;
+  left: 0;
+}
+
+.filter-menu {
+  width: 345px;
+  overflow: hidden;
+  height: 495px;
+  background: white;
+  padding: 30px 22px;
+  border-radius: 10px;
+  box-shadow: -1px -2px 23px 0px rgba(0, 0, 0, 0.19);
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: white;
+  border-radius: 10px;
+  padding: 30px 30px;
+  margin-bottom: 30px;
+  box-shadow: -1px -2px 23px 0px rgba(0, 0, 0, 0.19);
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 290px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #F2F4F5;
+  }
+}
+
+main {
+  width: 845px;
+}
+
+.logo-airlines {
+  width: 178px;
+  height: 50px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.buy-logo {
+  width: 240px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+
+}
+
+.buy-button {
+  width: 100%;
+  height: 80px;
+  background: #FF6D00;
+  outline: none;
+  border: none;
+  font-size: 25px;
+  font-weight: 500;
+  color: white;
+  border-bottom: 3px solid #D95007;
+  border-radius: 10px;
+  box-shadow: -1px -2px 23px 0px rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+
+  &:active {
+    background: #FF8124;
+    border-bottom: unset;
+  }
+}
+
+h2 {
+  font-size: 19px;
+}
+
+.curency {
+  //margin-top: 25px;
+  margin: 25px 0 50px;
+}
+
+.currency-btn {
+  width: 33.3%;
+  height: 60px;
+  outline: none;
+  color: #42A5F4;
+  cursor: pointer;
+  font-size: 19px;
+  background: white;
+  border: none;
+  border-top: 2px solid #E6E7E8;
+  border-bottom: 2px solid #E6E7E8;
+
+  &:first-child {
+    border: 2px solid #E6E7E8;
+    border-radius: 10px 0 0 10px;
+  }
+
+  &:last-child {
+    border: 2px solid #E6E7E8;
+    border-radius: 0 10px 10px 0;
+  }
+
+  &:hover {
+    border: 2px solid #42A5F4;
+    background: #F2FCFF;
+  }
+
+  &._active {
+    border: 2px solid #42A5F4;
+    background: #42A5F4;
+    color: #F2F4F5;
+  }
+}
+
+.transfers-count-title {
+  margin-bottom: 15px;
+}
+
+.filter-item {
+  user-select: none;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  justify-content: space-between;
+  //margin-bottom: 20px;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -22px;
+    width: 115%;
+    height: 100%;
+    background: #42A5F4;
+    opacity: 0.2;
+    z-index: -1;
+    display: none;
+  }
+
+  &:hover {
+    &:after {
+      display: block;
+    }
+
+    & .only {
+      display: inline;
+
+    }
+  }
+
+
+  label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  input {
+    cursor: pointer;
+    margin-right: 15px;
+    width: 30px;
+    height: 30px;
+  }
+
+  span {
+    font-size: 19px;
+  }
+}
+
+.only {
+  cursor: pointer;
+  color: #42A5F4;
+  display: none;
+}
+
+.time-transfers {
+  position: relative;
+  width: 500px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  .transfer{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+    width: 190px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 500;
+    color: #504f4f;
+    margin-bottom: 15px;
+  }
+
+  .city {
+    font-size: 18px;
+    font-weight: 600;
+    color: #504f4f;
+    margin-bottom: 9px;
+  }
+
+  .date {
+    font-size: 18px;
+  }
+}
+.kkk{
+  border-radius: 50%;
+  box-shadow: -1px -2px 23px 0px rgba(0, 0, 0, 0.19);
+}
